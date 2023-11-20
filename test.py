@@ -27,3 +27,7 @@ for i in new_list:
 file.close()
 
 print("damn idk what im doing")
+
+name = input("Search: ")
+
+print(new_list.index(name))
