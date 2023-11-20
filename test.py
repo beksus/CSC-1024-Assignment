@@ -26,3 +26,4 @@ for i in new_list:
     print(i)
 file.close()
 
+print("damn idk what im doing")
