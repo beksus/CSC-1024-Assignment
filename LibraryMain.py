@@ -15,5 +15,5 @@ while x:
         x = False
     else:
         print('failure!!! try again')
-
+print('template')
 
