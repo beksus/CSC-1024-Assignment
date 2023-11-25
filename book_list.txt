@@ -1,0 +1,20 @@
+9780747532686,JK Rowling,Harry Potter and the Philosopher's Stone,Bloomsbury,Fantasy,1997,15-03-2020,to-read
+9780747538490,JK Rowling,Harry Potter and the Chamber of Secrets,Bloomsbury,Fantasy,1998,07-08-2021,read
+9780747542152,JK Rowling,Harry Potter and the Prisoner of Azkaban,Bloomsbury,Fantasy,1999,23-11-2022,read
+9780747546242,JK Rowling,Harry Potter and the Goblet of Fire,Bloomsbury,Fantasy,2000,05-04-2020,to-read
+9780747551001,JK Rowling,Harry Potter and the Order of the Phoenix,Bloomsbury,Fantasy,2003,18-09-2023,read
+9780747581082,JK Rowling,Harry Potter and the Half-Blood Prince,Bloomsbury,Fantasy,2005,12-12-2021,to-read
+9780747591054,JK Rowling,Harry Potter and the Deathly Hallows,Fantasy,2007,30-06-2022,08-01-2023,to-read
+9781338099133,JK Rowling:John Tiffany:Jack Throne,Harry Potter and the Cursed Child,Little Brown and Company,Fantasy,2016,14-10-2020,read
+9780618346250,JRR Tolkien,The Lord of the Rings The Fellowship of the Ring,George Allen & Unwin,Fantasy,1954,19-02-2021,to-read
+9780385737944,James Dashner,The Maze Runner,Delacorte Press,Young Adult:Science Fiction:Dystopian,2009,03-07-2022,read
+9780345803498,EL James,Fifty Shades of Grey,Vintage Books,Romance:Erotica,2011,01-05-2020,read
+9780553573404,George RR Martin,A Game of Thrones,Bantam Books,Fantasy,1996,22-08-2023,to-read
+9781442426712,Jenny Han,To All the Boys I've Loved Before,Simon & Schuster,Young Adult:Romance,2014,10-11-2021,read
+9780316160179,Stephenie Meyer,Twilight,Little Brown and Company,Young Adult:Fantasy:Romance,2005,27-03-2022,to-read
+9780316160193,Stephenie Meyer,New Moon,Little Brown and Company,Young Adult:Fantasy:Romance,2006,05-09-2020,read
+9780062060617,Madeline Miller,The Song of Achilles,Ecco,Fiction:Mythology:Romance,2011,30-12-2022,to-read
+9781619027691,Massimo Pigliucci,How to Be a Stoic Using Ancient Philosophy to Live a Modern Life,Basic Book,Philosophy:Self-Help,2017,08-06-2021,read
+9780140280197,Robert Greene,The 48 Laws of Power,Penguin Books,Non-fiction:Self-help:Business,1998,14-02-2023,to-read
+9780811210196,E M Cioran,The Trouble with Being Born,Arcade Publishing,Philosophy,1973,03-10-2020,to-read
+9781416917661,Cassandra Clare,The Mortal Instruments City of Bones,Margaret K McElderry Books,Young Adult:Urban Fantasy,2007,17-07-2023,read
