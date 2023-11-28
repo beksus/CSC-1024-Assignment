@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e02573d7-e592-41e6-bd1f-706c62352228" name="Changes" comment="beautify file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e02573d7-e592-41e6-bd1f-706c62352228" name="Changes" comment="simplifying in reading code and adding comments">
       <change beforePath="$PROJECT_DIR$/LibraryManager/Book.py" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManager/Book.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701131668424</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="simplifying in reading code and adding comments">
+      <option name="closed" value="true" />
+      <created>1701132564715</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701132564715</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="beautify file" />
-    <option name="LAST_COMMIT_MESSAGE" value="beautify file" />
+    <MESSAGE value="simplifying in reading code and adding comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplifying in reading code and adding comments" />
   </component>
 </project>

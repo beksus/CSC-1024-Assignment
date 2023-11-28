@@ -32,7 +32,7 @@ class Book:
                            8: status})
 
 
-    # I don't know How to use it, it was generated from BlackBox AI so I don't know how to utilize it
+    # I don't know How to use it, it was generated from BlackBox AI ,so I don't know how to utilize it
     # assume it is a test function
 
 
@@ -46,7 +46,7 @@ class Book:
                 f" and purchased on"
                 f" {self.date_purchased}")
        
-#this is Getting item Funtion for accessing value of book e.g. title, author etc.
+# this is Getting item Funtion for accessing value of book e.g. title, author etc.
 
     def getter(self, i):
         return self.index[i]
