@@ -1,4 +1,5 @@
 from Book import Book
+from Display import Display
 
 
 file = open("book_list.txt", "r")
@@ -36,10 +37,15 @@ for item in new_list:
     print(item)
 
 # printing details
-for item in range(len(list)):
+"""for item in range(len(list)):
     
     print(list[item].getter(0) + ' | ' + list[item].getter(1) + ' | ' + list[item].getter(2) + ' | ' + list[item].getter(3) + ' | '+list[item].getter(4) + ' | '+list[item].getter(5) + ' | '+list[item].getter(6) + ' | '+list[item].getter(7) )
-    print('\n')
+    print('\n')"""
+
+
+disp = Display()
+
+disp.display_books(list)
 
 
 file.close()
