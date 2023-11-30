@@ -12,6 +12,9 @@ data
 new_list = []
 
 
+
+
+# getting the values from text file
 for line in data:
     line_strip = line.strip()
     line_split = line_strip.split(',')
@@ -19,8 +22,10 @@ for line in data:
 
 list = []
 
+
+
 for i in range(len(new_list)):
-     list.append(Book(new_list[i]))
+     list.append(Book(new_list[i][0] ,new_list[i][1],new_list[i][2],new_list[i][3],new_list[i][4],new_list[i][5],new_list[i][6],new_list[i][7], ))
 
 """for item in range(len(new_list)):
         new_list[item] = Book(new_list[item])
@@ -31,9 +36,9 @@ for item in new_list:
     print(item)
 
 # printing details
-for item in list:
+for item in range(len(list)):
     
-    print(str(item.getter(1)) + ' | ' + str(item.getter(2)) + ' | ' + item.getter(3) + ' | ' + item.getter(4) + ' | '+item.getter(5) + ' | '+item.getter(6) + ' | '+item.getter(7) + ' | '+item.getter(8) )
+    print(list[item].getter(0) + ' | ' + list[item].getter(1) + ' | ' + list[item].getter(2) + ' | ' + list[item].getter(3) + ' | '+list[item].getter(4) + ' | '+list[item].getter(5) + ' | '+list[item].getter(6) + ' | '+list[item].getter(7) )
     print('\n')
 
 

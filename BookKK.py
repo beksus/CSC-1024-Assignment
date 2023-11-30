@@ -35,6 +35,14 @@ class Book:
                            6: date_published,
                            7: date_purchased,
                            8: status})
+        """self.index.update({1: list[0],
+                           2: list[1],
+                           3: list[2],
+                           4: list[3],
+                           5: list[4],
+                           6: list[5],
+                           7: list[6],
+                           8: list[7]})"""
         self.list = [self.isbn, self.author,self.title,self.publisher,self.date_published,self.date_purchased,self.status]
 
         
