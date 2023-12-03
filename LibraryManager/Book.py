@@ -27,7 +27,7 @@ class Book:
     #idk how to use it, it was generated from BlackBox AI so idk how to utilize it
 
     def __str__(self):
-        return f"{self.title} by {self.author} was published by {self.publisher} in {self.genre} in {self.date_published} and purchased on {self.date_purchased}"
+        return f"{self.title} by {self.author} and published by {self.publisher} in the genre of {self.genre} published on {self.date_published} and purchased on {self.date_purchased}"
        
     
     
