@@ -1,4 +1,5 @@
 from Book import Book
+from Display import Display
 
 isbn = "9780747532686"
 author = 'JK Rowling'
@@ -19,3 +20,9 @@ book = Book(list)
 
 # you can call and get value with integer from 1 to 8
 print(book.getter(5))
+
+display = Display()
+
+while True:
+
+    choice = input("")
