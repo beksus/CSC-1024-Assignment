@@ -13,3 +13,11 @@ class Display:
     # i will finish it later
     def display_grid():
         pass
+    
+    def display_menu():
+        print('Library Manager')
+        print(" \n1 Add/Edit Books\n2 Delete Books\n3 Display Books\nChoose an option:")
+
+    def display_options(index):
+        if index is 1:
+            print("0")
