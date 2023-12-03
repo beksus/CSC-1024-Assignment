@@ -1,6 +1,12 @@
 """from Book import Book"""
+import os
 
 class Display:
+
+    list = []
+    def update_list(self,list):
+        self.list=list
+
     # this function for printing content of object
     def display_books(self,list):
         print(f"{'Title': <20}{'Author': <20}{'Genre': <20}{'Publication Year': <20}{'Pages': <20}{'Publisher': <20}{'Language': <20}{'ISBN': <20}")
@@ -14,10 +20,17 @@ class Display:
     def display_grid():
         pass
     
-    def display_menu():
+    def display_menu(self):
         print('Library Manager')
         print(" \n1 Add/Edit Books\n2 Delete Books\n3 Display Books\nChoose an option:")
 
-    def display_options(index):
+    def display_options(self,index):
         if index is 1:
-            print("0")
+            print("1 Add Books\n2 Edit Books\nChoose an Option")
+        elif index is 2:
+            print('Enter ISBN/Title to delete')
+        elif index is 3:
+            self.display_books(self.list)
+    
+    def clearScreen(self):
+        return os.system('cls' if os.name == 'nt' else 'clear')
