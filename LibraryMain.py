@@ -38,6 +38,8 @@ while True:
                 print('Invalid Choice')
         display.clearScreen()
 
-    
+    elif choise == '2':
+        while True:
+            display.display_options(2)
     else:
         print('Invalid Choise')

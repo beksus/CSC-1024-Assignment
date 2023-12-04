@@ -1,4 +1,3 @@
-"""from Book import Book"""
 import os
 
 class Display:
