@@ -1,3 +1,6 @@
+# notification: this is main test field of code 
+# if you want to understand how it work please read comments below
+
 from Book import Book
 from Display import Display
 

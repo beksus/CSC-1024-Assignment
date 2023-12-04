@@ -1,3 +1,5 @@
+# notification: this is main field of Delete
+
 class Delete:
 
     # this function is for deleting the books 
