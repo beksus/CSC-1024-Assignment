@@ -12,7 +12,7 @@ file = open("book_list.txt", "r")
 # r* - reading and writing
 
 data = file.readlines()
-data
+
 
 # this list is to save text content as a string format in 2d array
 new_list = []
@@ -33,7 +33,7 @@ list = []
 
 # creating object from list taking the values and saving it to the object as Book
 for i in range(len(new_list)):
-     list.append(Book(new_list[i][0] ,new_list[i][1],new_list[i][2],new_list[i][3],new_list[i][4],new_list[i][5],new_list[i][6],new_list[i][7], ))
+     list.append(Book(new_list[i][0] ,new_list[i][1],new_list[i][2],new_list[i][3],new_list[i][4],new_list[i][5],new_list[i][6],new_list[i][7] ))
 
 """for item in range(len(new_list)):
         new_list[item] = Book(new_list[item])
