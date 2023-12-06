@@ -16,7 +16,7 @@ display = Display()
 # main flow for program wich is not finished
 while True:
 
-    #display.clearScreen()
+    display.clearScreen()
 
     # this calling of funciton of saving the list inside of display to manage it easier
     display.update_list(list)
