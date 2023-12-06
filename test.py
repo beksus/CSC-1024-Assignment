@@ -3,6 +3,7 @@
 
 from Book import Book
 from Display import Display
+from AddEdit import AddEdit
 
 
 file = open("book_list.txt", "r")
@@ -17,7 +18,7 @@ data = file.readlines()
 # this list is to save text content as a string format in 2d array
 new_list = []
 
-
+add_new_books = AddEdit
 
 
 # getting the values from text file
@@ -52,6 +53,9 @@ for item in new_list:
 # displayer
 disp = Display()
 
+disp.display_books(list)
+list = add_new_books.add_book(list)
+print("\n\n")
 disp.display_books(list)
 
 
