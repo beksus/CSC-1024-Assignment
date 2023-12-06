@@ -36,6 +36,10 @@ while True:
             display.display_options(1)
             choice = str(input('Choose an Option: '))
             if choice == '1':
+                # code
+                break
+            elif choice == '2':
+                # code
                 break
             else:
                 print('Invalid Choice')
