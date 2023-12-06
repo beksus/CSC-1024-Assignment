@@ -8,7 +8,11 @@ class Book:
         self.year_published = year_published
         self.date_purchased = date_purchased
         self.status = status
+        self.list = [self.isbn,self.author,self.title]
 
+    def getter(self, index):
+        return self.list[index]
+    
 def search_books(books, keyword):
     results = []
     for book in books:
