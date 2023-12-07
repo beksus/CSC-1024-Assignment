@@ -25,15 +25,7 @@ class Book:
         self.date_published = date_published
         self.date_purchased = date_purchased
         self.status = status
-        self.index.update({1: isbn,
-                           2: author,
-                           3: title,
-                           4: publisher,
-                           5: genre,
-                           6: date_published,
-                           7: date_purchased,
-                           8: status})
-        self.list = [self.isbn, self.author,self.title,self.publisher,self.date_published,self.date_purchased,self.status]
+        self.list = [self.isbn, self.author, self.title, self.publisher, self.genre, self.date_published, self.date_purchased, self.status]
 
         
     # This is the __str__ function that represents the object as a string
@@ -42,8 +34,20 @@ class Book:
         return f"Title: {self.title}, Author: {self.author}, ISBN: {self.isbn}, Publisher: {self.publisher}, Genre: {self.genre}, Date Published: {self.date_published}, Date Purchased: {self.date_purchased}, Status: {self.status}"
         """
     # this method is for updating the book's value
-    def update(self, index, value):
-        self.list[index-1] = value
+    def update(self,index, value):
+        self.list[index] = str(value)
+
+    """def update_date_purchased(self, date_purchased):
+        self.list[4] = str(date_purchased)
+
+    def update_date_published(self, date):
+        self.list[5] = str(date)
+
+    def update_date_purchased(self, date_purchased):
+        self.list[6] = str(date_purchased)
+
+    def update_status(self, status):
+        self.list[7] = str(status)"""
 
     # this is Getting item Funtion for accessing value of book e.g. title, author etc.
     def getter(self, index):
