@@ -149,19 +149,28 @@ class AddEdit:
         
         index = int(input("Enter the isbn of the book which you want to update: "))
         disp.clearScreen()
+
+        # default values
+        book_index = 0
+        value = None
+
         for i in range(len(list)):
              if list[i].getter(0) == index:
                   book_index = int(i)
                   break
-                
+        # default value
+        choice = 8
         while True:
-            choice = input(" [1] ISBN\n [2] Title\n [3] Author's Name\n [4] Publisher\n [5] Genre\n [6] Date Published\n [7] Date Purchased\n [8] status\n Choose an option: ")
+            inp = input(" [1] ISBN\n [2] Title\n [3] Author's Name\n [4] Publisher\n [5] Genre\n [6] Date Published\n [7] Date Purchased\n [8] status\n [9] Exit \nChoose an option: ")
             try:
-                if choice.isdigit and int(choice) < 9 and int(choice) > 0:
+                if inp.isdigit and int(inp) < 9 and int(inp) > 0:
                     disp.clearScreen()
+                    choice = inp
                     #value = input(f"Enter value to change {index[int(choice)]} : ")
                     #list[book_index].update(choice, value)
                     break
+                elif int(choice) == 9 and choice.isdigit:
+                    return list
                 else:
                     disp.clearScreen()
                     print('Please input valid numbers in range of 1 to 8')
@@ -170,78 +179,118 @@ class AddEdit:
                 print('Please input valid numbers in range of 1 to 8')
 
         
-        if choice == 1:
+        if int(choice) == 1:
             while True: 
-                value = input("Enter the ISBN of the book: ")
+                value = input(" [1] Exit\nEnter the ISBN of the book: ")
                 length = len(value)
                 if length >= 10 and  length <= 13 and value.isnumeric():
                     break
+                elif value.isdigit and int(value) == 1:
+                     return list
                 else:
                     disp.clearScreen()
                     print("Please Enter Valid Numbers for ISBN between 10 and 13 digit numbers")
 
-        elif choice == 2:
+        elif int(choice) == 2:
             while True:
-
+                print(" [1] Exit\n")
                 name = input("Enter the Name of the Author: ")
                 surename = input("Enter the Surname of the Author: ")
                 # the author's name should contain only alphabets so .isaplpha is a validator for valid name
-                if name.isalpha and name.isalpha:
-                    name.casefold
-                    surename.casefold
-                    value = f"{name.title()} {surename.title()}"
-                    break
-                
-                disp.clearScreen()
-                print("Please Enter Valid Name and Surname for Book Author!")
+                try:
+                    if name.isalpha and name.isalpha:
+                        name.casefold
+                        surename.casefold
+                        value = f"{name.title()} {surename.title()}"
+                        break
+                    elif int(name) == 1:
+                        return list
+                    else:
+                        disp.clearScreen()
+                        print('Please input valid numbers in range of 1 to 8')
+                except:
+                    disp.clearScreen()
+                    print("Please Enter Valid Name and Surname for Book Author!")
 
-        elif choice == 3:
+        elif int(choice) == 3:
             while True:
 
-                value = input("Enter the title of the book: ")
+                value = input(" [1] Exit\nEnter the title of the book: ")
                 # the title's name should contain only alphanumerical and not just numbers
                 # for that .isalpha finds that name contains number or not 
-                # for detecting digit .isdigit should give false for valid name 
-                if value.isalnum:
-                    break
+                # for detecting digit .isdigit should give false for valid name
+                try:
+                    if value.isalnum:
+                        break
+                    elif int(value) == 1 and value.isdigit:
+                         return list
+                    else:
+                        disp.clearScreen()
+                        print("Please Enter Valid Title for Book Author!")
+                except:
+                    disp.clearScreen()
+                    print("Please Enter Valid Title for Book Author!")
 
-                disp.clearScreen()
-                print("Please Enter Valid Title for Book Author!")
+        elif int(choice) == 4:
+            while True:
+                value = input(" [1] Exit\nEnter the publisher of the book: ")
+                try:
+                    
+                    # statement to find out is the publisher has name as alphanumeric and not as numeric and not alphabetical
+                    if value.isalnum:
+                        break
+                    elif int(value) == 1 and value.isdigit:
+                        return list
+                    else:
+                        disp.clearScreen()
+                        print("Please Enter Valid Name of Publisher!")
+                except:
+                    disp.clearScreen()
+                    print("Please Enter Valid Name of Publisher!")
 
-        elif choice == 4:
+        elif int(choice) == 5:
             while True:
 
-                value = input("Enter the publisher of the book: ")
-                # statement to find out is the publisher has name as alphanumeric and not as numeric and not alphabetical
-                if value.isalnum:
-                    break
+                value = input(" [1] Exit\nEnter the genre of the book: ")
+                try:
+                    # the genre can contain only alphabetical letters
+                    if value.isalnum:
+                        break
+                    elif int(value) == 1:
+                        return list
+                    else:
+                        disp.clearScreen()
+                        print("Please Enter Genre of the Book!")
+                         
+                except:
+                    disp.clearScreen()
+                    print("Please Enter Genre of the Book!")
 
-                disp.clearScreen()
-                print("Please Enter Valid Name of Publisher!")
-
-        elif choice == 5:
+        elif int(choice) == 6:
             while True:
 
-                value = input("Enter the genre of the book: ")
-                # the genre can contain only alphabetical letters
-                if value.isalnum:
-                    break
-                disp.clearScreen()
-                print("Please Enter Genre of the Book!")
-
-        elif choice == 6:
-            while True:
-
-                value = input("Enter the date published of the book: ")
+                value = input(" [1] Exit\nEnter the date published of the book: ")
                 # statement for finding that year published is consist of 4 digit number and is it a digit
-                if len(value) == 4 and value.isdigit:
-                    break
-                print("Please enter a valid Year Published!")
+                try:
+                    if len(value) == 4 and value.isdigit:
+                        break
+                    elif int(value) == 1:
+                         return list
+                    else: 
+                        disp.clearScreen()
+                        print("Please enter a valid Year Published!")
+                except:
+                    disp.clearScreen()
+                    print("Please enter a valid Year Published!")
             
-        elif choice == 7:
+        elif int(choice) == 7:
             while True:
                 
-                day_purchased = input("Enter the day purchased of the book: ")
+                day_purchased = input(" [1] Exit\nEnter the day purchased of the book: ")
+
+                if int(day_purchased) == 1:
+                    return list
+                
                 month_purchased = input("Enter the month purchased of the book: ")
                 year_purchased = input("Enter the year purchased of the book: ")
                 # statement for finding that day, month, and year is digit
@@ -252,24 +301,24 @@ class AddEdit:
                     break
                 print("Please enter a valid Date Purchased!")
 
-        elif choice == 8:
+        elif int(choice) == 8:
             while True:
-                print(' [1] read\n [2] to-read\n [3] reading')
+                print(' [1] read\n [2] to-read\n [3] reading\n [4] Exit')
                 status_input = input("Enter the status of the book in range of 1-3: ")
+
                 status_type = ['read', 'to-read','reading']
 
                 # statement to check whether the entered string contains only alphabets or not and is it in range pf 1 to 3
                 if status_input.isdigit() and int(status_input) < 4 and int(status_input) > 0:
                     value = status_type[int(status_input)-1]
                     break
+                elif status_input == 4 and status_input.isdigit():
+                    return list
+                
                 print("Please enter a valid book status!")
         
-        """validator = Validator
-        value = validator.check_value_input(choice)
-        if value == -1:
-             print("Error! Please Try Again.")
-             return list"""
-        list[book_index].update(choice, value)
+        
+        list[book_index].update(int(choice)-1, value)
 
         return list
         
