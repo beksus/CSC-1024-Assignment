@@ -41,15 +41,10 @@ class Book:
     """def __str__(self):
         return f"Title: {self.title}, Author: {self.author}, ISBN: {self.isbn}, Publisher: {self.publisher}, Genre: {self.genre}, Date Published: {self.date_published}, Date Purchased: {self.date_purchased}, Status: {self.status}"
         """
+    # this method is for updating the book's value
+    def update(self, index, value):
+        self.list[index-1] = value
 
-
-    # I don't know How to use it, it was generated from BlackBox AI ,so I don't know how to utilize it
-    # assume it is a test function
-
-
-    
-       
-# this is Getting item Funtion for accessing value of book e.g. title, author etc.
-
-    def getter(self, i):
-        return self.list[i-1]
+    # this is Getting item Funtion for accessing value of book e.g. title, author etc.
+    def getter(self, index):
+        return self.list[index-1]

@@ -54,9 +54,10 @@ for item in new_list:
 disp = Display()
 
 disp.display_books(list)
-list = add_new_books.add_book(list)
+list = add_new_books.edit_book(list)
 print("\n\n")
 disp.display_books(list)
+
 
 
 file.close()
