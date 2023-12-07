@@ -146,18 +146,25 @@ class AddEdit:
         }
 
         disp = Display()
-        
-        index = int(input("Enter the isbn of the book which you want to update: "))
-        disp.clearScreen()
-
         # default values
         book_index = 0
         value = None
+        boole = True
+        
+        disp.clearScreen()
+        while boole:
+            index = int(input("Enter the isbn of the book which you want to update: "))
+            for i in range(len(list)):
+                if list[i].getter(0) == str(index):
+                    boole = False
+                    break
+                elif list[i].getter(0) != str(index):
+                    book_index += 1
 
-        for i in range(len(list)):
-             if list[i].getter(0) == index:
-                  book_index = int(i)
-                  break
+            if boole == True:
+                disp.clearScreen()
+                print("Please enter existing book!")
+        disp.clearScreen()
         # default value
         choice = 8
         while True:
