@@ -161,11 +161,11 @@ class AddEdit:
         # default value
         choice = 8
         while True:
-            inp = input(" [1] ISBN\n [2] Title\n [3] Author's Name\n [4] Publisher\n [5] Genre\n [6] Date Published\n [7] Date Purchased\n [8] status\n [9] Exit \nChoose an option: ")
+            choice = input(" [1] ISBN\n [2] Title\n [3] Author's Name\n [4] Publisher\n [5] Genre\n [6] Date Published\n [7] Date Purchased\n [8] status\n [9] Exit \nChoose an option: ")
             try:
-                if inp.isdigit and int(inp) < 9 and int(inp) > 0:
+                if choice.isdigit and int(choice) < 9 and int(choice) > 0:
                     disp.clearScreen()
-                    choice = inp
+                    choice = choice
                     #value = input(f"Enter value to change {index[int(choice)]} : ")
                     #list[book_index].update(choice, value)
                     break
@@ -311,6 +311,8 @@ class AddEdit:
                 # statement to check whether the entered string contains only alphabets or not and is it in range pf 1 to 3
                 if status_input.isdigit() and int(status_input) < 4 and int(status_input) > 0:
                     value = status_type[int(status_input)-1]
+                    list[book_index].update_status(value)
+                    print(list[book_index].getter(7))
                     break
                 elif status_input == 4 and status_input.isdigit():
                     return list

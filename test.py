@@ -53,10 +53,12 @@ for item in new_list:
 # displayer
 disp = Display()
 
+disp.display_search(list,"9780747538490")
+
 disp.display_books(list)
-list = add_new_books.edit_book(list)
+newlist = add_new_books.edit_book(list)
 print("\n\n")
-disp.display_books(list)
+disp.display_books(newlist)
 
 
 
