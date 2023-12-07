@@ -11,13 +11,22 @@ class Display:
     # this function for printing content of object
     def display_books(self,list):
         # printing the heading of contents
-        print(f"{'Title': <20}{'Author': <20}{'Genre': <20}{'Publication Year': <20}{'Pages': <20}{'Publisher': <20}{'Language': <20}{'ISBN': <20}")
+        print(f"{'ISBN':<18}{'Author': <20}{'Title': <35}{'Publisher': <13}{'Genre': <10}{'Date': <7}{'Purchased': <10}{'Status': <5}")
 
         # printing the contents
         for item in range(len(list)):
             #print(list[item].getter(0) + ' | ' + list[item].getter(1) + ' | ' + list[item].getter(2) + ' | ' + list[item].getter(3) + ' | '+list[item].getter(4) + ' | '+list[item].getter(5) + ' | '+list[item].getter(6) + ' | '+list[item].getter(7) )
-            print(f"{list[item].getter(0): <20}{list[item].getter(1): <20}{list[item].getter(2): <20}{list[item].getter(3): <20}{list[item].getter(4): <20}{list[item].getter(5): <20}{list[item].getter(6): <20}{list[item].getter(7): <20}")
+            print(f"{list[item].getter(0)} | {list[item].getter(1)} | {list[item].getter(2)} | {list[item].getter(3)} | {list[item].getter(4)} | {list[item].getter(5)} | {list[item].getter(6)} | {list[item].getter(7)}")
             print('\n')
+
+    def display_search(self, list, key):
+        index = 0
+        for i in range(len(list)):
+            if key == list[i].getter(0):
+                index = int(i)
+
+        print(f"{'ISBN':<18}{'Author': <20}{'Title': <35}{'Publisher': <13}{'Genre': <10}{'Date': <7}{'Purchased': <10}{'Status': <5}")
+        print(f"{list[index].getter(0)} | {list[index].getter(1)} | {list[index].getter(2)} | {list[index].getter(3)} | {list[index].getter(4)} | {list[index].getter(5)} | {list[index].getter(6)} | {list[index].getter(7)}")
 
     # i will finish it later
     def display_grid():
@@ -30,12 +39,14 @@ class Display:
 
     # prints the option for options for chosen option
     def display_options(self,index):
-        if index is 1:
+        if index == 1:
             print("1 Add Books\n2 Edit Books\nChoose an Option")
-        elif index is 2:
+        elif index == 2:
             print('Enter ISBN/Title to delete')
-        elif index is 3:
+        elif index == 3:
+            print(" [1] Display All Books\n [2] Display Specific")
             self.display_books(self.list)
+        
 
     # be carefull with this code
     # it can delete the whole text output after run so it will be cleaner to read the display
