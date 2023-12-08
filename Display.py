@@ -41,17 +41,22 @@ class Display:
     
     # prints the main menu options
     def display_menu(self):
-        print('Library Manager')
-        print(" \n1 Add/Edit Books\n2 Delete Books\n3 Display Books\nChoose an option:")
+        print('                                                          ')
+        print(" _ _ _                      _____                         ")
+        print('| |_| |_ ___ ___ ___ _ _   |     |___ ___ ___ ___ ___ ___ ')
+        print("| | | . |  _| .'|  _| | |  | | | | .'|   | .'| . | -_|  _|")
+        print('|_|_|___|_| |__,|_| |_  |  |_|_|_|__,|_|_|__,|_  |___|_|  ')
+        print('                    |___|                    |___|        ')
+        print(" \n [1] Add/Edit Books\n [2] Delete Books\n [3] Display Books\n [4] Exit\nChoose an option:")
 
     # prints the option for options for chosen option
     def display_options(self,index):
         if index == 1:
             print(" [1] Add Books\n [2] Edit Books\n [3]Exit")
         elif index == 2:
-            print('Enter ISBN or Title to delete\n [1] Exit')
+            print('Enter ISBN or Title to delete\n [1] Delete')
         elif index == 3:
-            print(" [1] Display All Books\n [2] Display Search\n [3]Exit")
+            print(" [1] Display All Books\n [2] Display Search\n [3] Exit")
             #self.display_books(self.list)
         
 

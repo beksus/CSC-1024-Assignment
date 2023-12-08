@@ -4,7 +4,6 @@ from Book import Book
 from Display import Display
 from Delete import Delete
 from AddEdit import AddEdit
-from Delete import Delete
 
 # notification: this is still raw and look immature so i will finish it later
 # you made a change here
@@ -16,8 +15,10 @@ new_list = []
 display = Display()
 delete = Delete()
 add_new_books = AddEdit()
+
 file = open("book_list.txt", "r")
 data = file.readlines()
+file.close()
 for line in data:
     line_strip = line.strip()
     line_split = line_strip.split(',')
@@ -51,7 +52,8 @@ while True:
             display.display_options(1)
             choice = str(input('Choose an Option: '))
             if choice == '1':
-                list = add_new_books.add_book(list)
+                new_list = add_new_books.add_book(list)
+                list = new_list
                 input('Press enter to exit: ')
                 break
             elif choice == '2':
@@ -68,9 +70,10 @@ while True:
     elif choice == '2':
         while True:
             display.display_options(2)
-            choice = str(input(' [1] Delete\n [2] Exit\nChoose an Option: '))
+            choice = str(input('[2] Exit\nChoose an Option: '))
             if choice == '1':
-                if delete.delete_book(list, str(input("Enter "))) == 1:
+                book = str(input("Enter book name: "))
+                if delete.delete_book(list, book) == 1:
                     print("Book Deleted Successfully")
                     input("Press enter to exit: ")
                 else:
@@ -83,6 +86,7 @@ while True:
                 display.clearScreen()
                 print('Invalid Choice')
     elif choice == '3':
+        
         while True:
             display.display_options(3)
             choice = str(input('Choose an Option: '))
@@ -92,16 +96,33 @@ while True:
             elif choice == '2':
                 display.display_search(list, str(input('Enter Books name: ')))
                 input('Press enter to exit: ')
-                display.clearScreen()
-                break
                 
             elif choice == '3':
                 break
             else:
                 display.clearScreen()
                 print('Invalid Choice')
+            display.clearScreen()
+            display.display_grid()
         display.clearScreen()
+
+    elif choice == '4':
+        break
     else:
         print('Invalid Choise')
 
-        
+file = open("book_list.txt", "w")
+
+for i in range(len(list)):
+    file.write(str(list[i].getter(0)) + 
+                ',' + str(list[i].getter(1)) +
+                ',' + str(list[i].getter(2)) +
+                ',' + str(list[i].getter(3)) + 
+                ',' + str(list[i].getter(4)) + 
+                ',' + str(list[i].getter(5)) + 
+                ',' + str(list[i].getter(5)) + 
+                ',' + str(list[i].getter(6)) + 
+                ',' + str(list[i].getter(7)) + '\n')
+
+file.close
+print("Thank You! For using Library System")

@@ -22,7 +22,7 @@ class AddEdit:
               description = raw_input('Enter Description about the book : ')
               imagePath = raw_input('Enter Image Path for the book cover : ')
               book = Book(title=title,author=author,price=price,publisher=publisher,year=year,genre=genre)"""
-    def add_book(list):
+    def add_book(self, list):
         disp = Display()
         
         while True: 
@@ -132,7 +132,7 @@ class AddEdit:
         
             
 
-    def edit_book(list):
+    def edit_book(self, list):
 
         index = {
         1: 'id',
