@@ -151,7 +151,7 @@ class AddEdit:
         value = None
         boole = True
         
-        disp.clearScreen()
+        #disp.clearScreen()
         while boole:
             index = int(input("Enter the isbn of the book which you want to update: "))
             for i in range(len(list)):
