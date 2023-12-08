@@ -3,7 +3,7 @@
 class Delete:
 
     # this function is for deleting the books 
-    def delete_book(self, book_list, book):
+    def delete_book(self, book_list, book:str):
         #de = str(input("enter book to delete: "))
         
         for i in book_list:

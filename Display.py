@@ -29,8 +29,12 @@ class Display:
         print(f"{list[index].getter(0)} | {list[index].getter(1)} | {list[index].getter(2)} | {list[index].getter(3)} | {list[index].getter(4)} | {list[index].getter(5)} | {list[index].getter(6)} | {list[index].getter(7)}")
 
     # i will finish it later
-    def display_grid():
-        pass
+    def display_grid(self):
+        print("         .-----.           .---.       \n     .---|-----|   .-.     | A |  .---.")
+        print("     |***|hello|---|_|--.__| S |__|^^^|\n .---|   |world|===| |__|KH| C |  |   |")
+        print(" |%%%|C# |     |IVN| |  |  | I |--|BRN|\n |BEK|   |     |===|_|  |**| I |  |   |")
+        print(" |   |   |     |   | |__|  |~~~|--|^^^|\n |   |   |#####|===|_|  |NV|   |  |   |")
+        print(" ^---^---^-----^---^-^--^--^---^--^---^")
     
     # prints the main menu options
     def display_menu(self):
@@ -40,12 +44,12 @@ class Display:
     # prints the option for options for chosen option
     def display_options(self,index):
         if index == 1:
-            print("1 Add Books\n2 Edit Books\nChoose an Option")
+            print(" [1] Add Books\n [2] Edit Books\n [3]Exit")
         elif index == 2:
-            print('Enter ISBN/Title to delete')
+            print('Enter ISBN or Title to delete\n [1] Exit')
         elif index == 3:
-            print(" [1] Display All Books\n [2] Display Specific")
-            self.display_books(self.list)
+            print(" [1] Display All Books\n [2] Display Search\n [3]Exit")
+            #self.display_books(self.list)
         
 
     # be carefull with this code
