@@ -58,6 +58,9 @@ disp.display_search(list,"9780747538490")
 disp.display_books(list)
 newlist = add_new_books.edit_book(list)
 print("\n\n")
+
+#list = add_new_books.add_book(list)
+#list = add_new_books.edit_book(list)
 disp.display_books(newlist)
 
 

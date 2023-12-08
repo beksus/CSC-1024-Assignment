@@ -4,7 +4,6 @@ class Delete:
 
     # this function is for deleting the books 
     def delete_book(self, book_list, book:str):
-        #de = str(input("enter book to delete: "))
         
         for i in book_list:
             if i.getter(7) == book or i.getter(0) == book or i.getter(1) == book:

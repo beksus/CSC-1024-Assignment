@@ -1,18 +1,31 @@
 # notification this is main filed of Main file 
 # notice it is not finished still raw i will finish it later
-
 from Book import Book
 from Display import Display
+from Delete import Delete
+from AddEdit import AddEdit
 from Delete import Delete
 
 # notification: this is still raw and look immature so i will finish it later
 # you made a change here
 
 # this list is for storing the book objects
-list=[]
+list = []
+new_list = []
 # this variable to initialize the Display class
 display = Display()
 delete = Delete()
+add_new_books = AddEdit()
+file = open("book_list.txt", "r")
+data = file.readlines()
+for line in data:
+    line_strip = line.strip()
+    line_split = line_strip.split(',')
+    new_list.append(line_split)
+    
+for i in range(len(new_list)):
+     list.append(Book(new_list[i][0] ,new_list[i][1],new_list[i][2],new_list[i][3],new_list[i][4],new_list[i][5],new_list[i][6],new_list[i][7] ))
+
 
 # main flow for program wich is not finished
 while True:
@@ -38,10 +51,12 @@ while True:
             display.display_options(1)
             choice = str(input('Choose an Option: '))
             if choice == '1':
-                # code
+                list = add_new_books.add_book(list)
+                input('Press enter to exit: ')
                 break
             elif choice == '2':
-                # code
+                list = add_new_books.edit_book(list)
+                input('Press enter to exit: ')
                 break
             elif choice == '3':
                 break
@@ -53,12 +68,16 @@ while True:
     elif choice == '2':
         while True:
             display.display_options(2)
-            choice = str(input('Choose an Option: '))
+            choice = str(input(' [1] Delete\n [2] Exit\nChoose an Option: '))
             if choice == '1':
-                # code
+                if delete.delete_book(list, str(input("Enter "))) == 1:
+                    print("Book Deleted Successfully")
+                    input("Press enter to exit: ")
+                else:
+                    print("Book not found")
                 break
-            elif choice != '1':
-                print("deleted")
+            elif choice == '2':
+                break
                 #delete.delete_book(list,str(choice))
             else:
                 display.clearScreen()
@@ -68,11 +87,14 @@ while True:
             display.display_options(3)
             choice = str(input('Choose an Option: '))
             if choice == '1':
-                # code
-                break
+                display.display_books(list)
+                input('Press enter to exit: ')
             elif choice == '2':
-                # code
+                display.display_search(list, str(input('Enter Books name: ')))
+                input('Press enter to exit: ')
+                display.clearScreen()
                 break
+                
             elif choice == '3':
                 break
             else:
@@ -81,3 +103,5 @@ while True:
         display.clearScreen()
     else:
         print('Invalid Choise')
+
+        
