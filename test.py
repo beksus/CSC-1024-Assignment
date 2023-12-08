@@ -30,8 +30,8 @@ for line in data:
 
 #this list for carrying object 
 list = []
-
-
+disp = Display()
+disp.clearScreen()
 # creating object from list taking the values and saving it to the object as Book
 for i in range(len(new_list)):
      list.append(Book(new_list[i][0] ,new_list[i][1],new_list[i][2],new_list[i][3],new_list[i][4],new_list[i][5],new_list[i][6],new_list[i][7] ))
@@ -51,7 +51,7 @@ for item in new_list:
     print('\n')"""
 
 # displayer
-disp = Display()
+
 
 disp.display_search(list,"9780747538490")
 
