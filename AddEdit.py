@@ -1,6 +1,5 @@
 from Book import Book
 from Display import Display
-from Validator import Validator
 class AddEdit:
 
     """def __init__(self, book):
