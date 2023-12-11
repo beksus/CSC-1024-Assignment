@@ -21,13 +21,14 @@ class Display:
 
     def display_search(self, list, key):
         index = 0
-        print(f"{'ISBN':<18}{'Author': <20}{'Title': <35}{'Publisher': <13}{'Genre': <10}{'Date': <7}{'Purchased': <10}{'Status': <5}")
+        
         for i in range(len(list)):
             for j in range(8):
                 if key == list[i].getter(j):
+                    print(f"{'ISBN':<18}{'Author': <20}{'Title': <35}{'Publisher': <13}{'Genre': <10}{'Date': <7}{'Purchased': <10}{'Status': <5}")
                     print(f"{list[i].getter(0)} | {list[i].getter(1)} | {list[i].getter(2)} | {list[i].getter(3)} | {list[i].getter(4)} | {list[i].getter(5)} | {list[i].getter(6)} | {list[i].getter(7)}")
 
-
+        print(f"Book wans't found by this key: {str(key)}")
         #print(f"{'ISBN':<18}{'Author': <20}{'Title': <35}{'Publisher': <13}{'Genre': <10}{'Date': <7}{'Purchased': <10}{'Status': <5}")
         #print(f"{list[index].getter(0)} | {list[index].getter(1)} | {list[index].getter(2)} | {list[index].getter(3)} | {list[index].getter(4)} | {list[index].getter(5)} | {list[index].getter(6)} | {list[index].getter(7)}")
 

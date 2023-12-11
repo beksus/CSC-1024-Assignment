@@ -53,11 +53,11 @@ class AddEdit:
 
         while True:
 
-                title = input("Enter the title of the book: ")
+                title_book = input("Enter the title of the book: ")
                 # the title's name should contain only alphanumerical and not just numbers
                 # for that .isalpha finds that name contains number or not 
                 # for detecting digit .isdigit should give false for valid name 
-                if title.isalnum:
+                if title_book.isalnum:
                     break
 
                 disp.clearScreen()
@@ -126,7 +126,7 @@ class AddEdit:
         disp.clearScreen()
             
         # creating book object and adding to existing list of objects
-        list.append(Book(isbn, author, title, publisher, genre, date_published, date_purchased, status))
+        list.append(Book(isbn, author, title_book.title(), publisher.title(), genre.title(), date_published, date_purchased, status))
         return list
         
             

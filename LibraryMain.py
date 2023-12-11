@@ -73,11 +73,7 @@ while True:
             choice = str(input('[2] Exit\nChoose an Option: '))
             if choice == '1':
                 book = str(input("Enter book name: "))
-                if delete.delete_book(list, book) == 1:
-                    print("Book Deleted Successfully")
-                    input("Press enter to exit: ")
-                else:
-                    print("Book not found")
+                delete.delete_book(list, book)
                 break
             elif choice == '2':
                 break
@@ -111,7 +107,7 @@ while True:
     else:
         print('Invalid Choise')
 
-file = open("book_list.txt", "w")
+"""file = open("book_list.txt", "w")
 
 for i in range(len(list)):
     file.write(str(list[i].getter(0)) + 
@@ -124,5 +120,5 @@ for i in range(len(list)):
                 ',' + str(list[i].getter(6)) + 
                 ',' + str(list[i].getter(7)) + '\n')
 
-file.close
+file.close"""
 print("Thank You! For using Library System")
